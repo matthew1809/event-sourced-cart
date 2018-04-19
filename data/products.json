@@ -1,0 +1,16 @@
+[{
+    "id": 1,
+    "name": "Unicorn Slippers",
+    "description": "Treat your feet to our cosy pair of Unicorn Slippers. The super cute fluffy white slippers feature a multi coloured furry mane and sparkly horn and will keep your feet toasty and warm around the house.",
+    "price": 10
+}, {
+    "id": 2,
+    "name": "Jesus Bobblehead",
+    "description": "Bring some calm and serenity to your dashboard with our Dashboard Jesus Bobblehead. Attach him to desks, cycling helmets, computers, or anywhere that needs some help from the Almighty. Dashboard Jesus comes with an adhesive base and a wobble spring.",
+    "price": 12
+}, {
+    "id": 3,
+    "name": "Millenium Falcon Jigsaw",
+    "description": "Find the missing piece to your Star Wars memorabilia collection with the Millennium Falcon Jigsaw! A stunning 201 piece jigsaw forming a silver and black image of Han Solo's iconic spaceship, the Millennium Falcon Jigsaw is a fun yet sleek looking puzzle coming in a themed embossed storage tin.",
+    "price": 6
+}]
