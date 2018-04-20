@@ -2,7 +2,7 @@
 
 This is a simple shopping cart API in node built using event sourcing. 
 
-Events are sent to Redis and RabbitMQ.
+Events are sent to Redis and RabbitMQ. You must have these running.
 
 ## Concepts
 https://www.npmjs.com/package/eventstore is used for the event store.
