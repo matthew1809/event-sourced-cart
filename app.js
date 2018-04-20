@@ -1,19 +1,9 @@
-// Import non local dependancies
 const express = require('express')
-const eventstore = require('eventstore')
+const app = express()
 
-// Import local utilities
-const rabbitUtils = require('./utils/rabbitUtils')
-const eventUtils = require('./utils/eventUtils')
-
-// Import dummy data
 let products = require('./data/products.json')
 let carts = require('./data/carts.json')
 
-// New express app
-const app = express()
-
-// Handle JSON in our express app
 app.use(express.json({
     extended: true
 }));
