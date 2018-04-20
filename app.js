@@ -1,9 +1,19 @@
+// Import non local dependancies
 const express = require('express')
-const app = express()
+const eventstore = require('eventstore')
 
+// Import local utilities
+const rabbitUtils = require('./utils/rabbitUtils')
+const eventUtils = require('./utils/eventUtils')
+
+// Import dummy data
 let products = require('./data/products.json')
 let carts = require('./data/carts.json')
 
+// New express app
+const app = express()
+
+// Handle JSON in our express app
 app.use(express.json({
     extended: true
 }));
@@ -137,8 +147,14 @@ app.put('/carts/:cartID/items/:itemID', (req, res) => {
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, () => console.log('App listening on port 3000!'))
 
 function emit(event, data) {
-    console.log('Event: %s / Data: %s', event, JSON.stringify(data))
-}
+
+    // Format received event + data into payload for events service
+    let payload = [{id: event, data: JSON.stringify(data)}];
+
+    // Pass payload to events service
+    try {eventUtils.asyncCommit(payload);}
+    catch(e) {console.log(e);}
+};
